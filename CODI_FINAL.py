@@ -272,6 +272,7 @@ elif st.session_state['pagina'] == 'dins_app':
                     if guardar_dades:
                         nom = str(st.session_state['op_fitxer']['dir'])+"\\"+st.session_state['op_fitxer']['nom_fitxer_energies_de_eines']+".csv"
                         df_energia_de_eines.to_csv(nom, header=True, index=False)
+			st.balloons()
                 
             else:
                 st.write("No hi ha dades d'energies per aquest període")

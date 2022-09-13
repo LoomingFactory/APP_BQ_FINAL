@@ -204,6 +204,7 @@ elif st.session_state['pagina'] == 'dins_app':
                 
                 nom = str(st.session_state['op_fitxer']['dir'])+"\\"+st.session_state['op_fitxer']['nom_fitxer_eines']+".csv"
                 df_eines.to_csv(nom, header=True, index=False)
+                st.success("El fitxer '"+st.session_state['op_fitxer']['nom_fitxer_eines']+"' s'ha creat correctament")
 
 
         else:
@@ -235,6 +236,7 @@ elif st.session_state['pagina'] == 'dins_app':
             if guardar_dades:
                 nom = str(st.session_state['op_fitxer']['dir'])+"\\"+st.session_state['op_fitxer']['nom_fitxer_energies']+".csv"
                 df_energia.to_csv(nom, header=True, index=False)
+                st.success("El fitxer '"+st.session_state['op_fitxer']['nom_fitxer_energies']+"' s'ha creat correctament")
 
         else:
             st.write("No hi ha dades d'energies per aquest període")
@@ -272,6 +274,7 @@ elif st.session_state['pagina'] == 'dins_app':
                     if guardar_dades:
                         nom = str(st.session_state['op_fitxer']['dir'])+"\\"+st.session_state['op_fitxer']['nom_fitxer_energies_de_eines']+".csv"
                         df_energia_de_eines.to_csv(nom, header=True, index=False)
+                        st.success("El fitxer '"+st.session_state['op_fitxer']['nom_fitxer_energies_de_eines']+"' s'ha creat correctament")
                         
                 
             else:

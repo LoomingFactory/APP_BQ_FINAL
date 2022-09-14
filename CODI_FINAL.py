@@ -177,7 +177,7 @@ elif st.session_state['pagina'] == 'dins_app':
             return df
 
 
-        os.chdir(st.session_state['op_fitxer']['dir'])
+        os.chdir("C:\Users\looming\Desktop\LARA\DATA_GUARDADA")
         ########################################## 1. EINES ##########################################
 
         st.title('1. DB EINES')

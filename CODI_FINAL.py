@@ -176,6 +176,8 @@ elif st.session_state['pagina'] == 'dins_app':
             df = pd.DataFrame(rows)
             return df
 
+
+        os.chdir(st.session_state['op_fitxer']['dir'])
         ########################################## 1. EINES ##########################################
 
         st.title('1. DB EINES')
@@ -295,3 +297,6 @@ elif st.session_state['pagina'] == 'dins_app':
             st.balloons()
 
             
+
+
+

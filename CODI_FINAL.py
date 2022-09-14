@@ -295,7 +295,6 @@ elif st.session_state['pagina'] == 'dins_app':
 
         if guardar_dades:
             st.balloons()
-
             
 
 

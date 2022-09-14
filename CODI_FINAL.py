@@ -6,6 +6,9 @@ import pandas as pd
 from google.cloud import bigquery
 from google.oauth2 import service_account
 
+import glob
+import os
+
 def dt_to_ts(data_str):
     dt = datetime.strptime(data_str, '%Y-%m-%d')
     ts=int(round(dt.timestamp()))*1000
@@ -237,6 +240,8 @@ elif st.session_state['pagina'] == 'dins_app':
                 nom = str(st.session_state['op_fitxer']['dir'])+"\\"+st.session_state['op_fitxer']['nom_fitxer_energies']+".csv"
                 df_energia.to_csv(nom, header=True, index=False)
                 st.success("El fitxer '"+st.session_state['op_fitxer']['nom_fitxer_energies']+"' s'ha creat correctament")
+                cwd = os.getcwd()
+                st.warning(cwd)
 
         else:
             st.write("No hi ha dades d'energies per aquest període")
@@ -288,3 +293,5 @@ elif st.session_state['pagina'] == 'dins_app':
 
         if guardar_dades:
             st.balloons()
+
+            
